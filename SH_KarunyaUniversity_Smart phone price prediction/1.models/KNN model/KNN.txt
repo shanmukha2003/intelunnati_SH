@@ -1,0 +1,13 @@
+
+ model_knn=model_knn.fit(X_train,Y_train)
+ 
+ Y_pred=model_knn.predict(X_test)
+ Y_pred
+ 
+ from sklearn.metrics import classification_report,accuracy_score,f1_score,confusion_matrix
+ 
+ knn=accuracy_score(Y_pred,Y_test)
+ 
+ print(classification_report(Y_pred,Y_test))
+ print(confusion_matrix(Y_pred,Y_test))
+ knn

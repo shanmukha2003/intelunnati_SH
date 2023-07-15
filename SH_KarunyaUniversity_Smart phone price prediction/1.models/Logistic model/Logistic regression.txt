@@ -1,0 +1,17 @@
+
+ model_lr = LogisticRegression(multi_class = 'multinomial', solver = 'sag',  max_iter = 10000)
+
+ model_lr.fit(X_train,Y_train)
+
+ model_lr.intercept_
+
+ model_lr.coef_
+
+ Y_pred=model_lr.predict(X_test)
+ Y_pred
+ 
+ from sklearn.metrics import classification_report,accuracy_score,f1_score,confusion_matrix
+
+ print(accuracy_score(Y_pred,Y_test))
+ print(classification_report(Y_pred,Y_test))
+ print(confusion_matrix(Y_pred,Y_test))
